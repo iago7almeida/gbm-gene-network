@@ -1,0 +1,26 @@
+# Ambientes Virtuais
+.venv/
+venv/
+ENV/
+env/
+
+# Ficheiros de Cache e Compilação Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Dados Locais (CRÍTICO: Não fazer commit de dados genómicos)
+data/raw/
+data/processed/
+*.csv
+*.tsv
+*.tar.gz
+
+# Variáveis de Ambiente e Credenciais
+.env
+.aws/
+credentials.json
+
+# Checkpoints de Notebooks
+.ipynb_checkpoints/

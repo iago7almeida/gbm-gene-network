@@ -1,0 +1,49 @@
+{
+  "title": "Dashboard Oncológico: Rede Glioblastoma",
+  "version": "2.4",
+  "settings": {
+    "fullscreenEnabled": true,
+    "theme": "dark"
+  },
+  "pages": [
+    {
+      "title": "Análise de Sistemas Complexos",
+      "reports": [
+        {
+          "title": "Visualização Topológica da Rede (Amostra)",
+          "query": "MATCH (n:Gene)-[r:CO_EXPRESSES_WITH]->(m:Gene)\nRETURN n, r, m\nLIMIT 300",
+          "width": 6,
+          "height": 3,
+          "type": "graph",
+          "parameters": {}
+        },
+        {
+          "title": "Top 10 Hubs (Centralidade de Grau)",
+          "query": "MATCH (g:Gene)-[r:CO_EXPRESSES_WITH]-()\nRETURN g.id AS Gene, count(r) AS Total_Conexoes\nORDER BY Total_Conexoes DESC\nLIMIT 10",
+          "width": 3,
+          "height": 2,
+          "type": "bar",
+          "parameters": {}
+        },
+        {
+          "title": "Master Regulators (Alcance Global)",
+          "query": "MATCH (alvo:Gene)-[:CO_EXPRESSES_WITH]-(vizinho:Gene)-[:CO_EXPRESSES_WITH]-(secundario:Gene)\nWHERE alvo <> secundario\nRETURN alvo.id AS Gene_Alvo, count(DISTINCT secundario) AS Alcance_Sistemico\nORDER BY Alcance_Sistemico DESC\nLIMIT 10",
+          "width": 3,
+          "height": 2,
+          "type": "bar",
+          "parameters": {}
+        },
+        {
+          "title": "Métrica de Força Regulatória",
+          "query": "MATCH (g:Gene)-[r:CO_EXPRESSES_WITH]-()\nRETURN g.id AS Gene, sum(abs(r.weight)) AS Forca_Absoluta\nORDER BY Forca_Absoluta DESC\nLIMIT 10",
+          "width": 6,
+          "height": 2,
+          "type": "table",
+          "parameters": {}
+        }
+      ]
+    }
+  ],
+  "parameters": {},
+  "extensions": {}
+}
