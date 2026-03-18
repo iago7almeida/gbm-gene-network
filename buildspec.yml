@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+    commands:
+      - echo "📦 Preparando o ambiente e instalando dependências..."
+      - pip install -r requirements.txt
+  
+  pre_build:
+    commands:
+      - echo "🔍 Verificando estrutura de pastas..."
+      - mkdir -p data/raw data/processed models
+      
+  build:
+    commands:
+      - echo "🚀 Iniciando o pipeline de Machine Learning (Glioblastoma)..."
+      
+       - python src/extract_clinical.py
+      - echo "🧠 Treinando o algoritmo Random Forest..."
+      - python src/train.py
+      
+artifacts:
+  files:
+    - models/modelo_sobrevivencia_gbm_v1.pkl
+  name: gbm-model-artifact

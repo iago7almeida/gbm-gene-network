@@ -14,3 +14,6 @@ boto3==1.34.40
 
 # Gestão de Variáveis de Ambiente (Para credenciais locais)
 python-dotenv==1.0.1
+
+# Machine learning
+scikit-learn==1.3.2

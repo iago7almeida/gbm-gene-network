@@ -113,9 +113,9 @@ if __name__ == "__main__":
     df_matriz = download_and_extract_matrix(ids, meta)
     
     print("\n📊 Matriz Final:")
-    print(df_matriz.head())
+    print(df_matriz.head(20))
     
     # 3. Salvar o modelo localmente
     output_path = "data/raw/matriz_gbm_bruta.csv"
-    df_matriz.to_csv(output_path, index=False)
+    df_matriz.to_csv(output_path, index=True, index_label='gene_id')
     print(f"\n💾 Arquivo salvo com sucesso em: {output_path}")
