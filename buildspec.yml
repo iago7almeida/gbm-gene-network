@@ -6,7 +6,8 @@ phases:
       python: 3.12
     commands:
       - echo "📦 Preparando o ambiente e instalando dependências..."
-      - pip install -r requirements.txt
+      # Usando pip3 para garantir a versão correta no Linux da AWS
+      - pip3 install -r requirements.txt
   
   pre_build:
     commands:
@@ -15,11 +16,10 @@ phases:
       
   build:
     commands:
-      - echo "🚀 Iniciando o pipeline de Machine Learning (Glioblastoma)..."
-      
-       - python src/extract_clinical.py
+      - echo "🚀 Iniciando a Extração de Dados Clínicos..."
+      - python3 src/extract_clinical.py
       - echo "🧠 Treinando o algoritmo Random Forest..."
-      - python src/train.py
+      - python3 src/train.py
       
 artifacts:
   files:
