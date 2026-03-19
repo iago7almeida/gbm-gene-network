@@ -37,20 +37,25 @@ def calculate_coexpression_network(df, correlation_threshold=0.8):
     # A transposição (.T) é necessária porque o pandas correlaciona colunas. 
     corr_matrix = df.T.corr(method='pearson')
     
+    # 🛠️ A CORREÇÃO AQUI: Renomear os eixos para evitar conflito de 'gene_id' no reset_index()
+    corr_matrix.index.name = 'source_idx'
+    corr_matrix.columns.name = 'target_idx'
+    
     print("🕸️ A transformar a matriz numa Lista de Arestas (Edge List)...")
     # Transforma a matriz quadrada num formato longo (Gene_A, Gene_B, Valor)
     edges = corr_matrix.stack().reset_index()
+    
     edges.columns = ['gene_source', 'gene_target', 'weight']
     
     # 1. Remover auto-correlações (Gene A com Gene A = 1.0)
     edges = edges[edges['gene_source'] != edges['gene_target']]
     
     # 2. Filtrar apenas correlações fortes (positivas ou negativas)
-    # Isso evita que o nosso banco de grafos fique sobrecarregado com conexões fracas e irrelevantes
+    # .copy() para evitar o warning de memória no passo 3
     strong_edges = edges[
         (edges['weight'] >= correlation_threshold) | 
         (edges['weight'] <= -correlation_threshold)
-    ]
+    ].copy()
     
     # 3. Remover duplicados (A->B é o mesmo que B->A na correlação de Pearson)
     # Ordenar os nomes dos genes para garantir que a dupla fica na mesma ordem e remover duplicados
