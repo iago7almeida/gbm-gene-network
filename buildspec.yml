@@ -16,6 +16,10 @@ phases:
       
   build:
     commands:
+      - echo "📊 Iniciando a Análise Exploratória de Dados (EDA)..."
+      - python3 src/extract_gdc.py
+      - echo "🧹 Limpando e processando os dados..."
+      - python3 src/process_matrix.py
       - echo "🚀 Iniciando a Extração de Dados Clínicos..."
       - python3 src/extract_clinical.py
       - echo "🧠 Treinando o algoritmo Random Forest..."
