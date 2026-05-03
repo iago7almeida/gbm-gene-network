@@ -1,0 +1,76 @@
+{
+  "median_survival": 382.0,
+  "km_risk": {
+    "Baixo Risco": {
+      "median": 592.0,
+      "n": 259,
+      "events": 259
+    },
+    "Alto Risco": {
+      "median": 157.0,
+      "n": 232,
+      "events": 232
+    },
+    "logrank_p": 7.572168178756268e-139
+  },
+  "km_age": {
+    ">65": {
+      "median": 223.0,
+      "n": 159,
+      "events": 159
+    },
+    "55-65": {
+      "median": 419.0,
+      "n": 145,
+      "events": 145
+    },
+    "40-55": {
+      "median": 458.0,
+      "n": 131,
+      "events": 131
+    },
+    "<40": {
+      "median": 630.0,
+      "n": 56,
+      "events": 56
+    },
+    "logrank_p": 2.768026394123096e-18
+  },
+  "km_gender": {
+    "male": {
+      "median": 383.0,
+      "n": 307,
+      "events": 307
+    },
+    "female": {
+      "median": 372.0,
+      "n": 184,
+      "events": 184
+    },
+    "logrank_p": 0.27638045376256853
+  },
+  "cox_c_index": 0.8029402708078462,
+  "hazard_ratios": [
+    {
+      "covariate": "idade",
+      "hazard_ratio": 1.0240959697738867,
+      "p_value": 4.1518887659023037e-10,
+      "ci_lower": 1.016475596241715,
+      "ci_upper": 1.0317734721667855
+    },
+    {
+      "covariate": "is_male",
+      "hazard_ratio": 1.0899072683905693,
+      "p_value": 0.35909293925722685,
+      "ci_lower": 0.9067398224684637,
+      "ci_upper": 1.3100757507889287
+    },
+    {
+      "covariate": "alto_risco",
+      "hazard_ratio": 184.40362524417267,
+      "p_value": 1.3474146857349535e-41,
+      "ci_lower": 86.51398822957584,
+      "ci_upper": 393.0543221861128
+    }
+  ]
+}

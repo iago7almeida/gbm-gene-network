@@ -1,0 +1,321 @@
+{
+  "total_patients": 491,
+  "model_name": "LightGBM (Optuna)",
+  "gene_alerts": {
+    "risk_genes": [
+      {
+        "feature": "ENSG00000276085",
+        "mean_shap": 0.0024290821555943,
+        "mean_abs_shap": 0.5719946274002586
+      },
+      {
+        "feature": "dias_para_diagnostico",
+        "mean_shap": 0.0322518126835286,
+        "mean_abs_shap": 0.343040091022775
+      },
+      {
+        "feature": "ENSG00000169429",
+        "mean_shap": 0.0075107865703561,
+        "mean_abs_shap": 0.1403551689486707
+      },
+      {
+        "feature": "ENSG00000249641",
+        "mean_shap": 0.0011815117341454,
+        "mean_abs_shap": 0.103931291191667
+      },
+      {
+        "feature": "ENSG00000106018",
+        "mean_shap": 0.0058693541390539,
+        "mean_abs_shap": 0.0691829272969083
+      },
+      {
+        "feature": "ENSG00000226430",
+        "mean_shap": 0.0003855180606956,
+        "mean_abs_shap": 0.0653343571759889
+      },
+      {
+        "feature": "ENSG00000237978",
+        "mean_shap": 0.0018343025315261,
+        "mean_abs_shap": 0.064990091677444
+      },
+      {
+        "feature": "ENSG00000187094",
+        "mean_shap": 0.007527175830022,
+        "mean_abs_shap": 0.044110511483006
+      },
+      {
+        "feature": "ENSG00000243915",
+        "mean_shap": 0.0001764764138326,
+        "mean_abs_shap": 0.0439917074305314
+      },
+      {
+        "feature": "ENSG00000286092",
+        "mean_shap": 0.0093268671415843,
+        "mean_abs_shap": 0.0350322633095602
+      },
+      {
+        "feature": "ENSG00000258917",
+        "mean_shap": 0.0008633042003995,
+        "mean_abs_shap": 0.0346799709244721
+      },
+      {
+        "feature": "ENSG00000111249",
+        "mean_shap": 0.0034652888197644,
+        "mean_abs_shap": 0.0305283416970474
+      },
+      {
+        "feature": "ENSG00000166897",
+        "mean_shap": 0.0011354061998278,
+        "mean_abs_shap": 0.0268164415523949
+      },
+      {
+        "feature": "ENSG00000100146",
+        "mean_shap": 0.0028853120358779,
+        "mean_abs_shap": 0.0265222514144086
+      },
+      {
+        "feature": "ENSG00000211896",
+        "mean_shap": 0.0014755055054471,
+        "mean_abs_shap": 0.0245168447125905
+      },
+      {
+        "feature": "ENSG00000223703",
+        "mean_shap": 1.2497128606812867e-06,
+        "mean_abs_shap": 0.0243430834754745
+      },
+      {
+        "feature": "ENSG00000287794",
+        "mean_shap": 0.0006504962076366,
+        "mean_abs_shap": 0.0227242283443885
+      },
+      {
+        "feature": "ENSG00000287990",
+        "mean_shap": 0.0045223448568968,
+        "mean_abs_shap": 0.0209692842136839
+      },
+      {
+        "feature": "ENSG00000164794",
+        "mean_shap": 0.0003208434326647,
+        "mean_abs_shap": 0.0196693359002139
+      },
+      {
+        "feature": "ENSG00000211899",
+        "mean_shap": 0.0017185401830808,
+        "mean_abs_shap": 0.0193003016430889
+      }
+    ],
+    "protective_genes": [
+      {
+        "feature": "ENSG00000228630",
+        "mean_shap": -0.0010500073618443,
+        "mean_abs_shap": 0.1645220290682506
+      },
+      {
+        "feature": "ENSG00000037965",
+        "mean_shap": -0.0011456071829102,
+        "mean_abs_shap": 0.1363836216018778
+      },
+      {
+        "feature": "ENSG00000115009",
+        "mean_shap": -0.0060247737236935,
+        "mean_abs_shap": 0.1117682611498495
+      },
+      {
+        "feature": "idade",
+        "mean_shap": -0.0006784873863296,
+        "mean_abs_shap": 0.1014851752233911
+      },
+      {
+        "feature": "ENSG00000211893",
+        "mean_shap": -0.0008905922490842,
+        "mean_abs_shap": 0.0766469454689006
+      },
+      {
+        "feature": "ENSG00000231104",
+        "mean_shap": -0.0013993035763164,
+        "mean_abs_shap": 0.0703332184329379
+      },
+      {
+        "feature": "ENSG00000276179",
+        "mean_shap": -0.0132889979853748,
+        "mean_abs_shap": 0.0682657015263583
+      },
+      {
+        "feature": "ENSG00000185149",
+        "mean_shap": -0.0018812526352266,
+        "mean_abs_shap": 0.0579073209304822
+      },
+      {
+        "feature": "ENSG00000227128",
+        "mean_shap": -0.0078580985621731,
+        "mean_abs_shap": 0.0542439903510025
+      },
+      {
+        "feature": "ENSG00000134460",
+        "mean_shap": -0.0085734778337804,
+        "mean_abs_shap": 0.0534552350520899
+      },
+      {
+        "feature": "ENSG00000276070",
+        "mean_shap": -0.0010997000984214,
+        "mean_abs_shap": 0.0463991752865003
+      },
+      {
+        "feature": "ENSG00000174482",
+        "mean_shap": -0.0065450573353208,
+        "mean_abs_shap": 0.0371891295167013
+      },
+      {
+        "feature": "ENSG00000250538",
+        "mean_shap": -0.0004595683866848,
+        "mean_abs_shap": 0.0342301293428754
+      },
+      {
+        "feature": "ENSG00000251687",
+        "mean_shap": -0.0012996263780838,
+        "mean_abs_shap": 0.0318887138586796
+      },
+      {
+        "feature": "ENSG00000235777",
+        "mean_shap": -0.0041746121109944,
+        "mean_abs_shap": 0.0307770648570419
+      },
+      {
+        "feature": "ENSG00000236816",
+        "mean_shap": -0.0036622318695571,
+        "mean_abs_shap": 0.0306914614565261
+      },
+      {
+        "feature": "ENSG00000207344",
+        "mean_shap": -7.887161695850719e-05,
+        "mean_abs_shap": 0.0240647187804182
+      },
+      {
+        "feature": "ENSG00000211897",
+        "mean_shap": -0.0003308344960797,
+        "mean_abs_shap": 0.0239066827830528
+      },
+      {
+        "feature": "ENSG00000163630",
+        "mean_shap": -0.0019271324417963,
+        "mean_abs_shap": 0.0234331200016784
+      },
+      {
+        "feature": "ENSG00000148408",
+        "mean_shap": -0.0021486368559341,
+        "mean_abs_shap": 0.0228130964141948
+      }
+    ]
+  },
+  "treatment_analysis": {
+    "Pharmaceutical Therapy, NOS": {
+      "count": 244,
+      "high_risk": 113,
+      "low_risk": 131,
+      "median_survival": 382.5,
+      "mean_survival": 511.83196721311475
+    },
+    "Radiation Therapy, NOS": {
+      "count": 289,
+      "high_risk": 146,
+      "low_risk": 143,
+      "median_survival": 360.0,
+      "mean_survival": 477.50865051903116
+    },
+    "Chemotherapy": {
+      "count": 470,
+      "high_risk": 128,
+      "low_risk": 342,
+      "median_survival": 543.0,
+      "mean_survival": 663.3510638297872
+    },
+    "Radiation, External Beam": {
+      "count": 190,
+      "high_risk": 75,
+      "low_risk": 115,
+      "median_survival": 428.5,
+      "mean_survival": 557.0473684210526
+    },
+    "Surgery, NOS": {
+      "count": 33,
+      "high_risk": 7,
+      "low_risk": 26,
+      "median_survival": 515.0,
+      "mean_survival": 665.969696969697
+    },
+    "Radiation, Stereotactic/Gamma Knife/SRS": {
+      "count": 16,
+      "high_risk": 2,
+      "low_risk": 14,
+      "median_survival": 683.5,
+      "mean_survival": 1122.125
+    },
+    "Hormone Therapy": {
+      "count": 67,
+      "high_risk": 31,
+      "low_risk": 36,
+      "median_survival": 438.0,
+      "mean_survival": 461.8358208955224
+    },
+    "Radiation, Intensity-Modulated Radiotherapy": {
+      "count": 2,
+      "high_risk": 1,
+      "low_risk": 1,
+      "median_survival": 420.5,
+      "mean_survival": 420.5
+    },
+    "Targeted Molecular Therapy": {
+      "count": 78,
+      "high_risk": 11,
+      "low_risk": 67,
+      "median_survival": 626.5,
+      "mean_survival": 753.5512820512821
+    },
+    "Brachytherapy, NOS": {
+      "count": 1,
+      "high_risk": 0,
+      "low_risk": 1,
+      "median_survival": 1448.0,
+      "mean_survival": 1448.0
+    },
+    "Immunotherapy (Including Vaccines)": {
+      "count": 18,
+      "high_risk": 0,
+      "low_risk": 18,
+      "median_survival": 734.0,
+      "mean_survival": 707.4444444444445
+    },
+    "Radiation, Cyberknife": {
+      "count": 3,
+      "high_risk": 1,
+      "low_risk": 2,
+      "median_survival": 406.0,
+      "mean_survival": 426.6666666666667
+    },
+    "Radiation, Implants": {
+      "count": 1,
+      "high_risk": 0,
+      "low_risk": 1,
+      "median_survival": 567.0,
+      "mean_survival": 567.0
+    },
+    "Radiation, Radioisotope": {
+      "count": 1,
+      "high_risk": 0,
+      "low_risk": 1,
+      "median_survival": 532.0,
+      "mean_survival": 532.0
+    },
+    "Radiation, Combination": {
+      "count": 1,
+      "high_risk": 0,
+      "low_risk": 1,
+      "median_survival": 1282.0,
+      "mean_survival": 1282.0
+    }
+  },
+  "risk_distribution": {
+    "alto_risco": 232,
+    "baixo_risco": 259
+  }
+}
